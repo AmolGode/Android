@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="String Format"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter the name...!"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextMessage1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Message Here...!"
+            android:inputType="textPersonName" />
+
+        <CheckBox
+            android:id="@+id/checkBoxBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bold" />
+
+        <CheckBox
+            android:id="@+id/checkBoxItalic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Italic" />
+
+        <CheckBox
+            android:id="@+id/checkBoxUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Underline" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupColor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:id="@+id/radioButtonBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blue" />
+
+            <RadioButton
+                android:id="@+id/radioButtonGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Green" />
+
+            <RadioButton
+                android:id="@+id/radioButtonRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Red" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/buttonDisplayMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginBottom="28dp"
+                    android:text="Display Message"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewResult"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/buttonClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Clear"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonDisplayMessage"
+                    app:layout_constraintStart_toEndOf="@+id/buttonDisplayMessage" />
+
+                <Button
+                    android:id="@+id/buttonExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Exit"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/buttonClear"
+                    app:layout_constraintStart_toEndOf="@+id/buttonClear" />
+
+                <TextView
+                    android:id="@+id/textViewResult"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="140dp"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonDisplayMessage" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RadioGroup>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

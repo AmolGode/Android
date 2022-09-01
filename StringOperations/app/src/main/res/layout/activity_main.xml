@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CABB39"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="256dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextString">
+
+        <RadioButton
+            android:id="@+id/radioButtonToUpper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uppercase" />
+
+        <RadioButton
+            android:id="@+id/radioButtonToLower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lowecase" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRight5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Right 5 Character" />
+
+        <RadioButton
+            android:id="@+id/radioButtonLeft5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Left 5 Character" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:paddingStart="5dp"
+        android:text="Enter String : "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextString"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextString"
+        android:layout_width="277dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter String"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clickButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Click"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/editTextResult"
+        android:layout_width="398dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clickButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
